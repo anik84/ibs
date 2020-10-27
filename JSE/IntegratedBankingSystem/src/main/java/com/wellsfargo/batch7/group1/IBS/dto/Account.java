@@ -1,20 +1,14 @@
 package com.wellsfargo.batch7.group1.IBS.dto;
 
-import java.time.LocalDate;
 
 
 public class Account implements Comparable<Account> {
 	
 	
-	private String AcctNumber;
-	private String UCI;
-	private String AcctHolderName;
-	private String AcctType;
-	private Integer Amount;
-	private Integer NewAmount;
-	private LocalDate AcctOpenDate;
-	private String AcctStatus;
-	private LocalDate MaturityDate;
+	private Integer acctNumber;
+	private Integer accountUCI;
+	private String acctType;
+	private Integer acctBalance;
 	
 	
 	
@@ -23,202 +17,65 @@ public class Account implements Comparable<Account> {
 		super();
 	}
 
-
-	
-
-	
-
-	public Account(String acctNumber, String uCI, String acctHolderName, String acctType, Integer amount,
-			Integer newAmount, LocalDate acctOpenDate, String acctStatus, LocalDate maturityDate) {
-		super();
-		AcctNumber = acctNumber;
-		UCI = uCI;
-		AcctHolderName = acctHolderName;
-		AcctType = acctType;
-		Amount = amount;
-		NewAmount = newAmount;
-		AcctOpenDate = acctOpenDate;
-		AcctStatus = acctStatus;
-		MaturityDate = maturityDate;
+	public Integer getAcctNumber() {
+		return acctNumber;
 	}
 
 
 
 
 
-
-	public String getAcctNumber() {
-		return AcctNumber;
+	public void setAcctNumber(Integer acctNumber) {
+		this.acctNumber = acctNumber;
 	}
 
 
 
 
 
-
-	public void setAcctNumber(String acctNumber) {
-		AcctNumber = acctNumber;
+	public Integer getAccountUCI() {
+		return accountUCI;
 	}
 
 
 
 
 
-
-	public String getUCI() {
-		return UCI;
+	public void setAccountUCI(Integer accountUCI) {
+		this.accountUCI = accountUCI;
 	}
-
-
-
-
-
-
-	public void setUCI(String uCI) {
-		UCI = uCI;
-	}
-
-
-
-
-
-
-	public String getAcctHolderName() {
-		return AcctHolderName;
-	}
-
-
-
-
-
-
-	public void setAcctHolderName(String acctHolderName) {
-		AcctHolderName = acctHolderName;
-	}
-
 
 
 
 
 
 	public String getAcctType() {
-		return AcctType;
+		return acctType;
 	}
-
 
 
 
 
 
 	public void setAcctType(String acctType) {
-		AcctType = acctType;
+		this.acctType = acctType;
 	}
 
 
 
 
 
-
-	public Integer getAmount() {
-		return Amount;
+	public Integer getAcctBalance() {
+		return acctBalance;
 	}
 
 
 
 
 
-
-	public void setAmount(Integer amount) {
-		Amount = amount;
+	public void setAcctBalance(Integer acctBalance) {
+		this.acctBalance = acctBalance;
 	}
-
-
-
-
-
-
-	public Integer getNewAmount() {
-		return NewAmount;
-	}
-
-
-
-
-
-
-	public void setNewAmount(Integer newAmount) {
-		NewAmount = newAmount;
-	}
-
-
-
-
-
-
-	public LocalDate getAcctOpenDate() {
-		return AcctOpenDate;
-	}
-
-
-
-
-
-
-	public void setAcctOpenDate(LocalDate acctOpenDate) {
-		AcctOpenDate = acctOpenDate;
-	}
-
-
-
-
-
-
-	public String getAcctStatus() {
-		return AcctStatus;
-	}
-
-
-
-
-
-
-	public void setAcctStatus(String acctStatus) {
-		AcctStatus = acctStatus;
-	}
-
-
-
-
-
-
-	public LocalDate getMaturityDate() {
-		return MaturityDate;
-	}
-
-
-
-
-
-
-	public void setMaturityDate(LocalDate maturityDate) {
-		MaturityDate = maturityDate;
-	}
-
-
-
-
-
-
-
-
-
-	@Override
-	public String toString() {
-		return "Account [AcctNumber=" + AcctNumber + ", UCI=" + UCI + ", AcctHolderName=" + AcctHolderName
-				+ ", AcctType=" + AcctType + ", Amount=" + Amount + ", NewAmount=" + NewAmount + ", AcctOpenDate="
-				+ AcctOpenDate + ", AcctStatus=" + AcctStatus + ", MaturityDate=" + MaturityDate + "]";
-	}
-
 
 
 
@@ -226,9 +83,9 @@ public class Account implements Comparable<Account> {
 
 	public int compareTo(Account o) {
 		// TODO Auto-generated method stub
-		if(Amount==o.Amount)  
+		if(acctBalance==o.acctBalance)  
 			return 0;  
-			else if(Amount>o.Amount)  
+			else if(acctBalance>o.acctBalance)  
 			return 1;  
 			else  
 			return -1; 
