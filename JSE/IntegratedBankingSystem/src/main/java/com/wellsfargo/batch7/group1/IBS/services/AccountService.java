@@ -10,11 +10,8 @@ public interface AccountService {
 	
 	Account addAccount(Account account) throws AccountException;
     //List<Account> balance(List<Account> account) throws AccountException;
-	void deposit(String acctNumber,int NewAmount) throws AccountException,SQLException;
-	void withdraw(String AcctNumber,int NewAmount) throws AccountException;
-	void transfer(String AcctNumber,int Amount) throws AccountException;
-	int balance(String account1) throws AccountException;
-	
-	
-
+	void deposit(int Amount,int acctNumber) throws AccountException,SQLException;
+	void withdraw(int AcctNumber,int Amount) throws AccountException;
+	void transfer(int AcctNumber,int Amount) throws AccountException;
+	int balance(int AcctNumber) throws AccountException;
 }

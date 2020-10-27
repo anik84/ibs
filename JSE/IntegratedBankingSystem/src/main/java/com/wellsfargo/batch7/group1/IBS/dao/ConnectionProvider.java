@@ -9,9 +9,11 @@ public class ConnectionProvider {
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e) {			
+			System.out.println("Driver Loaded");
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.exit(0);
+		
 		}
 	}
 

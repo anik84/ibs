@@ -23,18 +23,8 @@ public class AccountServiceImpl implements AccountService{
 	private boolean isValidAccount(Account account) throws AccountException {
 		boolean isValid=true;
 		List<String> errMsgs = new ArrayList<String>(); 
-		
-		if(account.getAcctNumber()==null || account.getAcctNumber().length()<4 || account.getAcctNumber().length()>20) {
-			errMsgs.add("Account number is manditory and must be of 4 to 20 AlphaNumber in length");
-		}
-		
 		if(account.getAcctNumber()==null) {
 			errMsgs.add("Account Number cannot be null");
-		}
-		
-		if(account.getAcctNumber().isEmpty()) {
-			if(true)
-			errMsgs.add("Account Number cannot be blank");
 		}
 		if(errMsgs.isEmpty()) {
 			isValid=true;			
@@ -62,30 +52,28 @@ public class AccountServiceImpl implements AccountService{
 
 
 	@Override
-	public void deposit(String acctNumber, int NewAmount) throws AccountException, SQLException {
+	public void deposit(int Amount,int acctNumber) throws AccountException, SQLException {
 		// TODO Auto-generated method stub
-		accountoperation.deposit(acctNumber, NewAmount);
-		
+		accountoperation.deposit(Amount,acctNumber);
 		
 	}
 
 
 	@Override
-	public int balance(String AcctNumber) throws AccountException {
+	public int balance(int AcctNumber) throws AccountException {
 		// TODO Auto-generated method stub
 		return accountoperation.balance(AcctNumber);
 	}
 
 
 	@Override
-	public void withdraw(String AcctNumber, int NewAmount) throws AccountException {
+	public void withdraw(int AcctNumber, int Amount) throws AccountException {
 		// TODO Auto-generated method stub
-		accountoperation.withdraw(AcctNumber, NewAmount);
+		accountoperation.withdraw(AcctNumber, Amount);
+
 	}
-
-
 	@Override
-	public void transfer(String AcctNumber, int Amount) throws AccountException {
+	public void transfer(int AcctNumber, int Amount) throws AccountException {
 		// TODO Auto-generated method stub
 		accountoperation.transfer(AcctNumber, Amount);
 	}

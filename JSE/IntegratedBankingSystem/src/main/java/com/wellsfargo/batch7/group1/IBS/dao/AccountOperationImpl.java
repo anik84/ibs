@@ -12,12 +12,12 @@ import com.wellsfargo.batch7.group1.IBS.exception.AccountException;
 
 public class AccountOperationImpl implements AccountOperation {
 	
-	public static final String INS_QRY = "INSERT INTO accountdetails(AcctNumber,UCI,AcctHolderName,AcctType,Amount,AcctOpenDate,AcctStatus,MaturityDate) VALUES(?,?,?,?,?,?,?,?)";
-	public static final String DEP_QRY = "UPDATE accountdetails SET Amount = ( Amount + ?) from AccountDetails WHERE AcctNumber = ?";
-	public static final String WITHDRAW_QRY = "UPDATE accountdetails SET Amount = (Amount - ?) from AccountDetails WHERE AcctNumber=?";
-	public static final String SELECT_BY_AMT_QRY = "SELECT Amount FROM accountdetails WHERE AcctNumber= ? ";
-	public static final String SELECT_BY_ID_QRY = "SELECT Amount FROM accountdetails WHERE AcctNumber = ? ";
-	public static final String SELECT_ALL_QRY = "SELECT AcctNumber,UCI,AcctHolderName,AcctType,Amount,AcctOpenDate,AcctStatus,MaturityDate FROM accountdetails";
+	public static final String INS_QRY = "INSERT INTO accountdetails(AcctNumber,Acctbalance,AcctType,AccountUCI) VALUES(?,?,?,?)";
+	public static final String DEP_QRY = " update accountdetails set AcctBalance = AcctBalance + ? from accountdetails where AcctNumber = ? ";
+	public static final String WITHDRAW_QRY = "UPDATE accountdetails SET AcctBalance = AcctBalance - ? from AccountDetails WHERE AcctNumber=?";
+	public static final String SELECT_BY_AMT_QRY = "SELECT AcctBalance FROM accountdetails WHERE AcctNumber = ? ";
+	public static final String SELECT_BY_ID_QRY = "SELECT AcctBalance FROM accountdetails WHERE AcctNumber = ? ";
+	public static final String SELECT_ALL_QRY = "SELECT * FROM accountdetails";
 	
 	
 	Logger log = Logger.getLogger("dao");
@@ -30,15 +30,10 @@ public class AccountOperationImpl implements AccountOperation {
 		if (account != null) {
 			try (Connection con = ConnectionProvider.getConn(); PreparedStatement ps = con.prepareStatement(INS_QRY)) {
 
-				ps.setString(1, account.getAcctNumber());
-				ps.setString(2, account.getUCI());
-				ps.setString(3, account.getAcctHolderName());
-				ps.setString(4, account.getAcctType());
-				ps.setDouble(5,account.getAmount());
-				ps.setDate(6, Date.valueOf(account.getAcctOpenDate()));
-				ps.setString(7, account.getAcctStatus());
-				ps.setDate(8, Date.valueOf(account.getMaturityDate()));
-
+				ps.setInt(1, account.getAcctNumber());
+				ps.setInt(2, account.getAcctBalance());
+				ps.setString(3, account.getAcctType());
+				ps.setInt(4, account.getAccountUCI());
 				ps.executeUpdate();
 			} catch (SQLException exp) {
 				log.error(exp);
@@ -58,14 +53,14 @@ public class AccountOperationImpl implements AccountOperation {
 
 
 	@Override
-	public int balance(String AcctNumber) throws AccountException {
+	public int balance(int AcctNumber) throws AccountException {
 		// TODO Auto-generated method stub
 		int Amount=0;
 		try (Connection con = ConnectionProvider.getConn(); 
 				PreparedStatement ps = con.prepareStatement("SELECT_BY_AMT_QRY"
 						)) {
 			
-			ps.setString(1, AcctNumber);
+			ps.setInt(2, AcctNumber);
 
 			ResultSet rs = ps.executeQuery();
 			
@@ -82,49 +77,35 @@ public class AccountOperationImpl implements AccountOperation {
 		 
 	}
 
-
-
-
-
-
-
-
-
-
-	
-	
-	
-
-
-
 	@Override
-	public void deposit(String AcctNumber, int NewAmount) throws SQLException {
+	public void deposit(int Amount,int AcctNumber) throws SQLException {
 		// TODO Auto-generated method stub
-		try (Connection con = ConnectionProvider.getConn(); PreparedStatement ps = con.prepareStatement(DEP_QRY)) {
+		try (Connection con = ConnectionProvider.getConn()) {
 			
-			ps.setString(2,AcctNumber);
-			ps.setInt(1,NewAmount);
+			PreparedStatement ps = con.prepareStatement("DEP_QRY");
+			ps.setInt(1,Amount);
+			ps.setInt(2,AcctNumber);
 			ps.executeUpdate();
-			try (Connection con1 = ConnectionProvider.getConn(); 
+		/*	try (Connection con1 = ConnectionProvider.getConn(); 
 					PreparedStatement ps1 = con1.prepareStatement(SELECT_BY_ID_QRY)) {
             
-				ps1.setString(1,AcctNumber);
-				
-
+				ps1.setInt(1, Amount);
+				ps1.setString(2,AcctNumber);
 				ResultSet rs = ps1.executeQuery();
 				
 				if(rs.next()) {
 					
 				 
-				 rs.getInt(1);
+					rs.getInt(1);
+					 rs.getString(2);
 					
-				}
+				
 			} catch (SQLException exp) {
 				exp.getMessage();
 				/*log.error(exp);
 				throw new AccountException("Operation Failed Due To An Error!");*/
 			}
-		} catch (SQLException exp) {
+		catch (SQLException exp) {
 			/*log.error(exp);
 			throw new AccountException("Operation Failed Due To An Error!");*/
 			exp.getMessage();
@@ -142,24 +123,24 @@ public class AccountOperationImpl implements AccountOperation {
 
 
 	@Override
-	public void withdraw(String AcctNumber, int NewAmount) throws AccountException {
+	public void withdraw(int  AcctNumber, int Amount) throws AccountException {
 try (Connection con = ConnectionProvider.getConn(); PreparedStatement ps = con.prepareStatement(WITHDRAW_QRY)) {
 			
-			ps.setString(2,AcctNumber);
-			ps.setInt(1,NewAmount);
+			ps.setInt(1,AcctNumber);
+			ps.setInt(2,Amount);
 			ps.executeUpdate();
-			try (Connection con1 = ConnectionProvider.getConn(); 
+			/*try (Connection con1 = ConnectionProvider.getConn(); 
 					PreparedStatement ps1 = con1.prepareStatement(SELECT_BY_ID_QRY)) {
-            
-				ps1.setString(1,AcctNumber);
 				
-
+                ps1.setInt(7, NewAmount);
+                ps1.setString(1,AcctNumber);
 				ResultSet rs = ps1.executeQuery();
 				
 				if(rs.next()) {
 					
 				 
 				 rs.getInt(1);
+				 rs.getString(2);
 					
 				}
 			} catch (SQLException exp) {
@@ -167,7 +148,7 @@ try (Connection con = ConnectionProvider.getConn(); PreparedStatement ps = con.p
 				/*log.error(exp);
 				throw new AccountException("Operation Failed Due To An Error!");*/
 			}
-		} catch (SQLException exp) {
+		catch (SQLException exp) {
 			/*log.error(exp);
 			throw new AccountException("Operation Failed Due To An Error!");*/
 			exp.getMessage();
@@ -178,12 +159,12 @@ try (Connection con = ConnectionProvider.getConn(); PreparedStatement ps = con.p
 
 
 	@Override
-	public void transfer(String AcctNumber, int Amount) throws AccountException {
+	public void transfer(int AcctNumber, int Amount) throws AccountException {
 		// TODO Auto-generated method stub
 		Account account=null;
 		try (Connection con = ConnectionProvider.getConn(); PreparedStatement ps = con.prepareStatement(WITHDRAW_QRY)) {			
-			ps.setDouble(5, Amount);
-			ps.executeUpdate();
+			ps.setInt(1,AcctNumber);
+			ps.setInt(2,Amount);
 		} catch (SQLException exp) {
 			log.error(exp);
 			throw new AccountException("Operation Failed Due To An Error!");
