@@ -1,0 +1,12 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+	<head>
+		<title>IBS Home</title>
+	</head>
+	<body>
+		<h1>!! Welcome to IBS !!</h1>
+		<h3><%=LocalDate.now() %></h3>		
+		<h3>Please select what you want to do today from the following:</h2>
+		<jsp:include page="menu.jsp"/>
+	</body>
+</html>

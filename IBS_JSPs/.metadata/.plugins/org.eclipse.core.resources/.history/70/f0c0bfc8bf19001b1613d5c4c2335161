@@ -1,0 +1,25 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>user account operations</title>
+</head>
+<body>
+	<h1>
+		!! User Account Operations Page :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+	
+	<br />
+	<a href="">Open New Account</a><br /><br />
+	<a href="">Balance Check</a><br /><br />
+	<a href="">Mini Statement</a><br /><br />
+	<a href="">Monthly Statement</a><br /><br />
+	<a href="">Periodic Statement</a><br /><br />
+	<a href="">Annual Statement</a><br /><br />
+	<a href="">Transfer Funds</a><br /><br />
+	<a href="">Pay Utility Bills</a><br /><br />
+
+</body>
+</html>

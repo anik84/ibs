@@ -1,0 +1,22 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>new user registration</title>
+</head>
+<body>
+	<h1>
+		!! New User Registration :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+	<hr />
+		<a href="">Home</a>
+		<span> | </span>
+		<a href="">Accounts</a>
+		<span> | </span>
+		<a href="">Beneficiary</a>
+	<hr />
+
+</body>
+</html>
