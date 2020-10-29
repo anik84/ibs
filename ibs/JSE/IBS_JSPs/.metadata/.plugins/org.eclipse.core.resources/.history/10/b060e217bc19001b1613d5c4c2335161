@@ -1,0 +1,36 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>new user registration</title>
+</head>
+<body>
+	<h1>
+		!! New User Registration :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+	<ul>
+		<li class="vertical" href="#">Vertical One</li>
+		<li class="vertical">Vertical Two</li>
+		<li class="vertical">Vertical Three</li>
+	</ul>
+	<ul>
+		<li class="horizontal">Horizontal One</li>
+		<li class="horizontal">Horizontal Two</li>
+		<li class="horizontal">Horizontal Three</li>
+	</ul>
+	
+		<a href="">Balance Check</a>
+		<span> | </span>
+		<a href="">Accounts</a>
+		<span> | </span>
+		<a href="">Beneficiary</a>
+		
+		<a class="vertical" href="#">Link 1</a>
+	    <a class="horizontal" href="#">Link 2</a>
+	    <a class="horizontal" href="#">Link 3</a>
+	
+
+</body>
+</html>

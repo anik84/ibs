@@ -1,0 +1,9 @@
+<nav>
+	<hr />
+	 <a href="index.jsp">New User Registration</a>
+	 <span> | </span>
+	 <a href="">IBS Executive Home</a>
+	 <span> | </span>
+	 <a href="">IBS Representative Home</a>
+	<hr />
+</nav>
