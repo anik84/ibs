@@ -1,0 +1,26 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>new user registration</title>
+</head>
+<body>
+	<h1>
+		!! New User Registration :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+
+	
+
+	<h2>Please fill up the details for registration:</h2>
+	<form action="newuser" method="POST">
+		<div class="dropdown">
+		<button class="dropbtn">Dropdown</button>
+		<div class="dropdown-content">
+			<a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>
+		</div>
+	</div>
+	</form>
+</body>
+</html>

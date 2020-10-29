@@ -1,0 +1,8 @@
+package com.wellsfargo.batch7.ibs.model;
+
+public class IBSEmployeeLogin {
+	private String loginId;
+	private String empPassword;
+	private String empCategory;
+
+}

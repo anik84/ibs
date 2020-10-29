@@ -1,0 +1,7 @@
+<nav>
+	<hr />
+	 <a href="index.jsp">Home</a>
+	 <span>\n</span>
+	 <a href="">Simple interest</a>
+	<hr />
+</nav>
