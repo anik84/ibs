@@ -1,0 +1,9 @@
+<nav>
+	<hr />
+	 <a href="user_representative_home.jsp">Home</a>
+	 <span> | </span>
+	 <a href="">Accounts</a>
+	 <span> | </span>
+	 <a href="">Beneficiary</a>
+	<hr />
+</nav>

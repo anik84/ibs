@@ -1,0 +1,9 @@
+<nav>
+	<hr />
+	 <a href="user_home.jsp">Home</a>
+	 <span> | </span>
+	 <a href="user_accounts.jsp">User Accounts</a>
+	 <span> | </span>
+	 <a href="user_benificiary.jsp">User Login</a>
+	<hr />
+</nav>
