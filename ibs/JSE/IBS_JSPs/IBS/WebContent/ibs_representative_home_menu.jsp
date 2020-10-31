@@ -1,9 +1,0 @@
-<nav>
-	<hr />
-	 <a href="ibs_representative_home.jsp">Home</a>
-	<hr />
-	<a href="ibs_representative_statement_form.jsp">Monthly Statement</a><br /><br />
-	<a href="ibs_representative_statement_form.jsp">Periodic Statement</a><br /><br />
-	<a href="ibs_representative_statement_form.jsp">Annual Statement</a><br /><br />
-	<a href="ibs_representative_funds_deposit_form.jsp">Funds Deposit Entry</a><br /><br />
-</nav>

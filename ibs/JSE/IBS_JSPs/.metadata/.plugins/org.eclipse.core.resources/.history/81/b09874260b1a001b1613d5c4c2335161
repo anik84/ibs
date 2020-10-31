@@ -1,8 +1,0 @@
-<nav>
-	<hr />
-	 <a href="user_representative_home.jsp">Home</a>
-	<hr />
-	<a href="user_mini_statement_display_form.jsp">Mini Statement</a><br /><br />
-	<a href="user_monthly_statement_display_form.jsp">Monthly Statement</a><br /><br />
-	<a href="user_periodic_statement_display_form.jsp">Periodic Statement</a><br /><br />
-</nav>

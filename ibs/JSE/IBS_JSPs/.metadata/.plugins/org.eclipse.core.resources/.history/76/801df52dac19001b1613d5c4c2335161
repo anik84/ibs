@@ -1,5 +1,0 @@
-<select name="category">
-    <option value="category_id">name</option>
-    <option value="category_id">name</option>
-    <option value="category_id">name</option>
-</select>
