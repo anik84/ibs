@@ -1,8 +1,0 @@
-<form action="list" method="post">
-	Select a Category:&nbsp; <select
-		name="category">
-		<option value="category_id">name</option>
-		<option value="category_id">name</option>
-		<option value="category_id">name</option>
-	</select>
-</form>
