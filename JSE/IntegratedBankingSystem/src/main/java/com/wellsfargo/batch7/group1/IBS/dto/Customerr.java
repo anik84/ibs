@@ -1,6 +1,10 @@
 package com.wellsfargo.batch7.group1.IBS.dto;
 
+<<<<<<< HEAD
 import java.awt.Image;
+=======
+import com.sun.prism.Image;
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 
 public class Customerr {
 	
@@ -15,6 +19,7 @@ public class Customerr {
 	private Image BLOB;
 	private Boolean emailSent;
 	
+<<<<<<< HEAD
 	
 	
 	public Customerr() {
@@ -22,6 +27,8 @@ public class Customerr {
 		// TODO Auto-generated constructor stub
 	}
 
+=======
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	public Customerr(Integer uCI, String custFirstName, String custLastName, String custAddress, String custPhoneNo,
 			String password, Boolean isReqApproved, String userStatus, Image bLOB, Boolean emailSent) {
 		super();

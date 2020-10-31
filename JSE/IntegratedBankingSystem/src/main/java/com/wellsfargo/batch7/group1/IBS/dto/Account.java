@@ -6,6 +6,7 @@ public class Account implements Comparable<Account> {
 	
 	
 	private Integer acctNumber;
+<<<<<<< HEAD
 	private String acctType;
 	private Integer acctBalance;
 	private Long accountUCI;
@@ -44,7 +45,23 @@ public class Account implements Comparable<Account> {
 
 	public Integer getAcctNumber() {
 		return acctNumber;
+=======
+	private Integer accountUCI;
+	private String acctType;
+	private Integer acctBalance;
+	
+	
+	
+	
+	public Account() {
+		super();
 	}
+
+	public Integer getAcctNumber() {
+		return acctNumber;
+	}
+
+
 
 
 
@@ -54,24 +71,62 @@ public class Account implements Comparable<Account> {
 
 
 
+
+
+	public Integer getAccountUCI() {
+		return accountUCI;
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
+	}
+
+
+
+<<<<<<< HEAD
+	public void setAcctNumber(Integer acctNumber) {
+		this.acctNumber = acctNumber;
+=======
+
+
+	public void setAccountUCI(Integer accountUCI) {
+		this.accountUCI = accountUCI;
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
+	}
+
+
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	public String getAcctType() {
 		return acctType;
 	}
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	public void setAcctType(String acctType) {
 		this.acctType = acctType;
 	}
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	public Integer getAcctBalance() {
 		return acctBalance;
 	}
 
 
 
+<<<<<<< HEAD
 	public void setAcctBalance(Integer acctBalance) {
 		this.acctBalance = acctBalance;
 	}
@@ -80,14 +135,23 @@ public class Account implements Comparable<Account> {
 
 	public Long getAccountUCI() {
 		return accountUCI;
+=======
+
+
+	public void setAcctBalance(Integer acctBalance) {
+		this.acctBalance = acctBalance;
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	}
 
 
 
+<<<<<<< HEAD
 	public void setAccountUCI(Long accountUCI) {
 		this.accountUCI = accountUCI;
 	}
 
+=======
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 
 
 	public int compareTo(Account o) {

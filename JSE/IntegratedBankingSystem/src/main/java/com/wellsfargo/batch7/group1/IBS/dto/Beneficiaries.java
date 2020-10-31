@@ -9,6 +9,7 @@ public class Beneficiaries {
 	private Integer otherBenefAcctID;
 	private Double otherBenefAcctBalance;
 	private Integer custBenefuci;
+<<<<<<< HEAD
 	Customerr c;
 	
 	public Beneficiaries() {
@@ -30,6 +31,9 @@ public class Beneficiaries {
 		this.c = c;
 	}
 
+=======
+	
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	public Integer getSelfBenefAcctID() {
 		return selfBenefAcctID;
 	}
