@@ -9,15 +9,32 @@ public class serviceProviders {
 	private String executivePhoneNo;
 	private String password;
 	private Image docKYC;
+<<<<<<< HEAD
+	Customerr c;
+	
+	
+	public serviceProviders() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public serviceProviders(Integer accountID, String executiveLastName, String executivePhoneNo, String password,
+			Image docKYC, Customerr c) {
+=======
 	
 	public serviceProviders(Integer accountID, String executiveLastName, String executivePhoneNo, String password,
 			Image docKYC) {
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 		super();
 		this.accountID = accountID;
 		this.executiveLastName = executiveLastName;
 		this.executivePhoneNo = executivePhoneNo;
 		this.password = password;
 		this.docKYC = docKYC;
+<<<<<<< HEAD
+		this.c = c;
+=======
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	}
 
 	public Integer getAccountID() {

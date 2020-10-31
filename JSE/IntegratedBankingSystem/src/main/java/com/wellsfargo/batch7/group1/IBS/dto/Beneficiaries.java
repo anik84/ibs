@@ -9,7 +9,31 @@ public class Beneficiaries {
 	private Integer otherBenefAcctID;
 	private Double otherBenefAcctBalance;
 	private Integer custBenefuci;
+<<<<<<< HEAD
+	Customerr c;
 	
+	public Beneficiaries() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Beneficiaries(Integer selfBenefAcctID, Double selfBenefAcctBalance, Integer benefCreditCardID,
+			Double benefCreditCardAcctBalance, Integer otherBenefAcctID, Double otherBenefAcctBalance,
+			Integer custBenefuci, Customerr c) {
+		super();
+		this.selfBenefAcctID = selfBenefAcctID;
+		this.selfBenefAcctBalance = selfBenefAcctBalance;
+		this.benefCreditCardID = benefCreditCardID;
+		this.benefCreditCardAcctBalance = benefCreditCardAcctBalance;
+		this.otherBenefAcctID = otherBenefAcctID;
+		this.otherBenefAcctBalance = otherBenefAcctBalance;
+		this.custBenefuci = custBenefuci;
+		this.c = c;
+	}
+
+=======
+	
+>>>>>>> 7dc73a75b5e18529308d1d5fd5b0675b0573d976
 	public Integer getSelfBenefAcctID() {
 		return selfBenefAcctID;
 	}
