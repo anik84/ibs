@@ -1,0 +1,47 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>pay utility bills</title>
+</head>
+<body>
+	<h1>
+		!! Pay Utility Bill :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+
+	<form action="utilitybill" method="POST">
+	
+		<!-- This should be populated from the account details DB -->
+		<div>
+			From Account No: <select name="fromAccountNo">
+				<option value="fromAccountNo_1">100</option>
+				<option value="fromAccountNo_2">200</option>
+
+			</select>
+		</div><br />
+		
+		<!-- This should be populated from the service provider account details DB -->
+		<div>
+			Service Provider Account No: <select name="serviceProviderAccount">
+				<option value="fromAccountNo_1">500</option>
+				<option value="fromAccountNo_2">600</option>
+
+			</select>
+		</div><br />
+		
+		<div>
+			<label>Amount: </label> <input type="number" name="billAmount"
+				required />
+		</div><br />
+		<div>
+			<label>Transaction Password: </label> <input type="text" name="transactionPassword"
+				required />
+		</div><br />
+		<div>
+			<button>Pay</button>
+		</div>
+	</form>
+</body>
+</html>

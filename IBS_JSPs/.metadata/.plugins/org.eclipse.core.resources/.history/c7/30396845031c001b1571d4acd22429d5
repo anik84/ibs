@@ -1,0 +1,51 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>user monthly statement</title>
+</head>
+<body>
+	<h1>
+		!! Monthly Statement :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_menu.jsp" />
+
+	<h2>Please fill up the details for registration:</h2>
+	<form action="newuser" method="POST">
+		<div>
+			<label>First Name: </label> <input type="text" name="firstName"
+				required />
+		</div><br />
+		<div>
+			<label>Last Name: </label> <input type="text" name="lastName"
+				required />
+		</div><br />
+		<div>
+			<label>Email Id: </label> <input type="text" name="emailId" required />
+		</div><br />
+		<div>
+			<label>Residential Address: </label> <input type="text"
+				name="address" required />
+		</div><br />
+		<div>
+			<label>Date Of Birth: </label> <input type="date" name="dob"
+				required />
+		</div><br />
+		<div>
+			<label>Phone Number: </label> <input type="number" name="phoneNo"
+				required />
+		</div><br />
+		<div>
+			Select User Category: <select name="userCategory">
+				<option value="userCategory_1">Customer</option>
+				<option value="userCategory_2">Service Provider</option>
+
+			</select>
+		</div><br />
+		<div>
+			<button>Register</button>
+		</div>
+	</form>
+</body>
+</html>

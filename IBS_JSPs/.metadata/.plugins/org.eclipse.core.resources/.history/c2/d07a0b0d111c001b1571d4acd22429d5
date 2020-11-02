@@ -1,0 +1,8 @@
+package com.wellsfargo.batch7.ibs.model;
+
+public class PayUtilityBill {
+	private long fromAccountNo;
+	private long serviceProviderAccount;
+	private double billAmount;
+
+}

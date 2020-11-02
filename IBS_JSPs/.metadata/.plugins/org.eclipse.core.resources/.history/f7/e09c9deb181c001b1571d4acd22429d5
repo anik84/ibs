@@ -1,0 +1,36 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>add own credit card as beneficiary</title>
+</head>
+<body>
+	<h1>
+		!! Add Own Credit Card as Beneficiary :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+
+	<form action="addbenefcreditcard" method="POST">
+		<div>
+			<label>Name on the Credit Card: </label> <input type="text" name="benefCreditCardName"
+				required />
+		</div><br />
+		<div>
+			<label>Credit Card No: </label> <input type="number" name="benefCreditCardNo"
+				required />
+		</div><br />
+		<div>
+			<label>Credit Card valid till date: </label> <input type="text"  pattern="(?:0[1-9]|1[0-2])/[0-9]{2}" name="benefCreditCardExpiry"
+				required />
+		</div><br />
+		<div>
+			<label>Credit Card CVV No: </label> <input type="number" name="benefCVVNo"
+				required />
+		</div><br />
+		<div>
+			<button>Add</button>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+127.0.0.1 - - [30/Oct/2020:13:10:12 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [30/Oct/2020:13:11:40 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:11:57 +0530] "GET /IBS/ HTTP/1.1" 200 481
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:11:57 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:12:41 +0530] "GET /IBS/user_home.jsp HTTP/1.1" 200 367
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:12:56 +0530] "GET /IBS/user_accounts.jsp HTTP/1.1" 200 1206
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:12:57 +0530] "GET /IBS/user_beneficiary.jsp HTTP/1.1" 200 1020
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:13:52 +0530] "GET /IBS/ibs_employee_login.jsp HTTP/1.1" 200 972
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:14:42 +0530] "GET /IBS/ibs_representative_home.jsp HTTP/1.1" 200 614
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:16:05 +0530] "GET /IBS/ibs_accounts_executive_home_form.jsp HTTP/1.1" 200 977
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:16:28 +0530] "GET /IBS/ HTTP/1.1" 200 481
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:16:30 +0530] "GET /IBS/new_user_registration_form.jsp HTTP/1.1" 200 1313
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:16:32 +0530] "GET /IBS/user_login.jsp HTTP/1.1" 200 970
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:16:33 +0530] "GET /IBS/ibs_employee_login.jsp HTTP/1.1" 200 972
+0:0:0:0:0:0:0:1 - - [30/Oct/2020:13:16:35 +0530] "GET /IBS/index.jsp HTTP/1.1" 200 481

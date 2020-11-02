@@ -1,0 +1,9 @@
+package com.wellsfargo.batch7.ibs.model;
+
+public class OpenNewAccount {
+	
+	private double depositAmount;
+	private String accountType;
+	private long accountNo;
+
+}
