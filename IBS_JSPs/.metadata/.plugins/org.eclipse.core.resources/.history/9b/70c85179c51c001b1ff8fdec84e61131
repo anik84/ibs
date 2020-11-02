@@ -1,0 +1,31 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>open new account</title>
+</head>
+<body>
+	<h1>
+		!! Account Balance :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+
+	<table>
+		<tr>
+			<td><strong>Account No: </strong></td>
+			<td><em>${UserAccountBalance.accountNo}</em></td>
+			<td><strong>Account Balance: </strong></td>
+			<td><em>${UserAccountBalance.accountBalance}</em></td>
+			
+		</tr>
+		<tr>
+			<td><strong>Account Balance: </strong></td>
+			<td><em>${UserAccountBalance.accountBalance}</em></td>
+		</tr>
+	</table>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>user monthly statement</title>
+</head>
+<body>
+	<h1>
+		!! Monthly Statement :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+	<!--
+	<h2>Please fill up the details for monthly statement:</h2> -->
+	<form action="monthlystatement" method="POST">
+		<div>
+			<label>Account Number: </label> <input type="number" name="accountNo"
+				required />
+		</div><br />
+		<div>
+			<label>Statement Month: </label> <input type="text" name="stmtMonth"
+				required />
+		</div><br />
+		<div>
+			<button>Get Statement</button>
+		</div>
+	</form>
+</body>
+</html>

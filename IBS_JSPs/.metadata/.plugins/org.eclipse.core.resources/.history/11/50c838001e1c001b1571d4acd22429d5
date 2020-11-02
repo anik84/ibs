@@ -1,0 +1,12 @@
+package com.wellsfargo.batch7.ibs.model;
+
+public class ModifyOtherBenificiaryAccount {
+	private long existingOtherBenefAcctNo;
+	private long modifyOtherBenefAcctNoTo;
+	private String otherPeopleBenefFullNameTo;
+	
+	public ModifyOtherBenificiaryAccount() {
+		
+	}
+
+}

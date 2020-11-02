@@ -1,0 +1,11 @@
+<nav>
+	<hr />
+	 <a href="index.jsp">Home</a>
+	 <span> | </span>
+	 <a href="user_new_registration_form.jsp">New User Registration</a>
+	 <span> | </span>
+	 <a href="user_login.jsp">User Login</a>
+	 <span> | </span>
+	 <a href="ibs_employee_login.jsp">IBS Employee Login</a>
+	<hr />
+</nav>

@@ -1,0 +1,51 @@
+<%@page import="java.time.LocalDate"%>
+<html>
+<head>
+<title>open new account</title>
+</head>
+<body>
+	<h1>
+		!! Account Balance :
+		<%=LocalDate.now()%>
+		!!
+	</h1>
+	<jsp:include page="user_home_menu.jsp" />
+
+	<table>
+		<tr>
+			<td><strong>First Name: </strong></td>
+			<td><em>${IBSAccountsExecutive.firstName}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Last Name: </strong></td>
+			<td><em>${IBSAccountsExecutive.lastName}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Email ID: </strong></td>
+			<td><em>${IBSAccountsExecutive.emailId}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Residential Address: </strong></td>
+			<td><em>${IBSAccountsExecutive.address}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Date of Birth: </strong></td>
+			<td><em>${IBSAccountsExecutive.dob}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Phone Number: </strong></td>
+			<td><em>${IBSAccountsExecutive.phoneNo}</em></td>
+		</tr>
+		<br\>
+		<br\>
+	</table>
+		
+		
+		
+	</body>
+</html>

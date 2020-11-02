@@ -1,0 +1,26 @@
+package com.wellsfargo.batch7.ibs.model;
+
+import java.time.YearMonth;
+
+public class OwnCreditCardBeneficiary {
+	private String benefCreditCardName;
+	private long benefCreditCardNo;
+	private YearMonth benefCreditCardExpiry;
+	private Integer benefCVVNo;
+	
+	public OwnCreditCardBeneficiary() {
+		
+	}
+
+	public OwnCreditCardBeneficiary(String benefCreditCardName, long benefCreditCardNo, YearMonth benefCreditCardExpiry,
+			Integer benefCVVNo) {
+		super();
+		this.benefCreditCardName = benefCreditCardName;
+		this.benefCreditCardNo = benefCreditCardNo;
+		this.benefCreditCardExpiry = benefCreditCardExpiry;
+		this.benefCVVNo = benefCVVNo;
+	}
+	
+	
+
+}
