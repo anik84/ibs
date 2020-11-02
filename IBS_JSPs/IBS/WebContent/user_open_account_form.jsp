@@ -10,8 +10,8 @@
 		!!
 	</h1>
 	<jsp:include page="user_home_menu.jsp" />
-
-	<h2>Please fill up the details for new account:</h2>
+<!-- 
+	<h2>Please fill up the details for new account:</h2>   -->
 	<form action="newaccount" method="POST">
 		<div>
 			<label>Deposit Amount: </label> <input type="number" name="depositAmunt"
@@ -21,7 +21,7 @@
 			Select Account Type: <select name="userCategory">
 				<option value="acctType_1">Savings Account</option>
 				<option value="acctType_2">Current Account</option>
-				<option value="acctType_3">Service Provider</option>
+				<option value="acctType_3">Fixed Deposit Account</option>
 			</select>
 		</div><br />
 		<div>

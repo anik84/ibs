@@ -1,3 +1,11 @@
+--- check multi button
+	<form action="addotherbenefacct" method="POST">
+		<div>
+			<button>Approve</button>
+			&nbsp;&nbsp;
+			<button>Reject</button>
+		</div>
+	</form>
 
 --- user_accounts.jsp
 <!--  need to check if on click value can be retrieved for user_balance_check_display_form.jsp

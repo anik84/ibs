@@ -11,9 +11,8 @@
 	</h1>
 	<jsp:include page="user_home_menu.jsp" />
 
-	<h2>Modify other people Beneficiary Account:</h2>
 	<form action="modifyotherpeoplebenefacct" method="POST">
-
+		<br />
 		<div>
 			<label>Existing Other People Beneficiary Account No: </label> <input
 				type="number" name="existingOtherBenefAcctNo" required />

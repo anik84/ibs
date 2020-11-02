@@ -11,8 +11,8 @@
 	</h1>
 	<jsp:include page="user_menu.jsp" />
 
-	<h2>Please enter the registered credential to login:</h2>
 	<form action="emplogin" method="POST">
+		<br \>
 		<div>
 			<label>Login Id: </label> <input type="text" name="loginId"
 				required />
