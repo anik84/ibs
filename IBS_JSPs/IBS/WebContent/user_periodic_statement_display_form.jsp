@@ -11,7 +11,6 @@
 	</h1>
 	<jsp:include page="user_home_menu.jsp" />
 
-	<h2>Enter the details for Periodic Statement:</h2>
 	<form action="periodicstatement" method="POST">
 		<div>
 			<label>Account No: </label> <input type="number" name="accountNo"

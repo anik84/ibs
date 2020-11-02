@@ -1,11 +1,14 @@
 package com.wellsfargo.batch7.ibs.model;
 
+import java.time.LocalDate;
+
 public class NewUserRegistration {
 	private String firstName;
 	private String lastName;
 	private String emailId;
 	private String address;
 	private String phoneNo;
+	private LocalDate dob;
 	private String newUserCategory;
 	
 	
@@ -15,13 +18,14 @@ public class NewUserRegistration {
 
 
 	public NewUserRegistration(String firstName, String lastName, String emailId, String address, String phoneNo,
-			String newUserCategory) {
+			LocalDate dob, String newUserCategory) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
 		this.address = address;
 		this.phoneNo = phoneNo;
+		this.dob = dob;
 		this.newUserCategory = newUserCategory;
 	}
 
@@ -76,6 +80,16 @@ public class NewUserRegistration {
 	}
 
 
+	public LocalDate getDob() {
+		return dob;
+	}
+
+
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
+
+
 	public String getNewUserCategory() {
 		return newUserCategory;
 	}
@@ -86,8 +100,6 @@ public class NewUserRegistration {
 	}
 
 
-	
-	
 	
 	
 }

@@ -9,40 +9,54 @@
 		<%=LocalDate.now()%>
 		!!
 	</h1>
-	<h2>Please check the KYC and user details to approve or reject:</h2>
 
-	<form action="addotherbenefacct" method="POST">
+	<table>
+		<tr>
+			<td><strong>First Name: </strong></td>
+			<td><em>${IBSAccountsExecutive.firstName}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Last Name: </strong></td>
+			<td><em>${IBSAccountsExecutive.lastName}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Email ID: </strong></td>
+			<td><em>${IBSAccountsExecutive.emailId}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Residential Address: </strong></td>
+			<td><em>${IBSAccountsExecutive.address}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Date of Birth: </strong></td>
+			<td><em>${IBSAccountsExecutive.dob}</em></td>
+		</tr>
+		<br\>
+		<tr>
+			<td><strong>Phone Number: </strong></td>
+			<td><em>${IBSAccountsExecutive.phoneNo}</em></td>
+		</tr>
+		<br\>
+		<br\>
+	</table>
+
+	<form action="approve" method="POST">
 		<div>
-			<label>First Name: </label> <input type="text" name="firstName"
-				required />
-		</div>
-		<br />
-		<div>
-			<label>Last Name: </label> <input type="text" name="lastName"
-				required />
-		</div>
-		<br />
-		<div>
-			<label>Email Id: </label> <input type="text" name="emailId" required />
-		</div>
-		<br />
-		<div>
-			<label>Residential Address: </label> <input type="text"
-				name="address" required />
-		</div>
-		<br />
-		<div>
-			<label>Phone Number: </label> <input type="number" name="phoneNo"
-				required />
-		</div>
-		<br />
-		<div>
-			<button>Get New Request</button>
-			&nbsp;&nbsp;
 			<button>Approve</button>
 			&nbsp;&nbsp;
 			<button>Reject</button>
 		</div>
 	</form>
+	
+	<!-- 
+	<form action="reject" method="POST">
+		<div>
+			<button>Reject</button>
+		</div>
+	</form>   -->
 </body>
 </html>

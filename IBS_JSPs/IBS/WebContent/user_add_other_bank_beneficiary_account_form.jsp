@@ -11,8 +11,8 @@
 	</h1>
 	<jsp:include page="user_home_menu.jsp" />
 
-	<h2>Add Other Beneficiary Account:</h2>
 	<form action="addotherbenefacct" method="POST">
+		<br />
 		<div>
 			<label>Beneficiary Full Name: </label> <input type="text" name="otherPeopleBenefFullName"
 				required />

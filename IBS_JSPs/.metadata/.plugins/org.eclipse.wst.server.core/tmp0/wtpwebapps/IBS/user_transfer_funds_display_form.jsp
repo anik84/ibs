@@ -5,13 +5,12 @@
 </head>
 <body>
 	<h1>
-		!! Transfer Funds :
+		!! Transfer Fund :
 		<%=LocalDate.now()%>
 		!!
 	</h1>
 	<jsp:include page="user_home_menu.jsp" />
 
-	<h2>Enter the details for Transferring Funds:</h2>
 	<form action="transferfund" method="POST">
 		
 		<!-- This should be populated from the account details DB -->

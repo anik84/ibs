@@ -11,8 +11,8 @@
 	</h1>
 	<jsp:include page="user_menu.jsp" />
 
-	<h2>Please fill up the details for registration:</h2>
 	<form action="newuser" method="POST">
+		<br \>
 		<div>
 			<label>First Name: </label> <input type="text" name="firstName"
 				required />
@@ -27,6 +27,10 @@
 		<div>
 			<label>Residential Address: </label> <input type="text"
 				name="address" required />
+		</div><br />
+		<div>
+			<label>Date Of Birth: </label> <input type="date" name="dob"
+				required />
 		</div><br />
 		<div>
 			<label>Phone Number: </label> <input type="number" name="phoneNo"

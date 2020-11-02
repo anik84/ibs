@@ -11,9 +11,8 @@
 	</h1>
 	<jsp:include page="user_home_menu.jsp" />
 
-	<h2>Enter Credit Card details to modify Beneficiary card details:</h2>
 	<form action="modifybenefcreditcard" method="POST">
-		
+		<br />
 		<div>
 			<label>Existing Beneficiary Credit Card No: </label> <input type="number" name="existingBenefCreditCardNo"
 				required />
@@ -25,10 +24,7 @@
 			<label>Name on the Credit Card to: </label> <input type="text" name="modifyBenefCreditCardNameTo" />
 		</div><br />
 		<div>
-			<label>Credit Card valid till date to: </label> <input type="text" name="modifyBenefCreditCardValidityTo" />
-		</div><br />
-		<div>
-			<label>Credit Card CVV to: </label> <input type="text" name="modifyBenefCreditCardCVVNoTo" />
+			<label>Credit Card CVV to: </label> <input type="text" name="modifyBenefCreditCardCVVTo" />
 		</div><br />
 		<div>
 			<button>Update</button>
