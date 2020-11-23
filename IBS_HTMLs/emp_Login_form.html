@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+                   initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IBS Home</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        
+        h1 {
+            color: white;
+            background-color: black;
+            font-size: 2em;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        h2,
+        ul {
+            text-align: center;
+        }
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid black;
+        }
+        
+        form {
+            text-align: center;
+        }
+        
+        label {
+            margin-right: 5px;
+            width: 160px;
+            display: inline-block;
+            text-align: right;
+        }
+        
+        input {
+            margin: 5px;
+        }
+        #empCategory{
+            width: 155px;
+            margin-right: 11px;
+
+        }
+        select{
+           width: 167px; 
+        }
+        
+        button {
+            margin: 5px;
+            width: 102px;
+            margin-left: 109px;
+        }
+        
+        a {
+            margin-right: 5px;
+        }
+        
+        footer {
+            text-align: center;
+        }
+        a:hover{
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Common Bank of India</h1>
+    <h2>Employee Login</h2>
+    <ul>
+        <li><a href="index.html">Bank Home</a></li>
+    </ul>
+    <form action="userLogin" method="post">
+        <div>
+            <label for="loginId">Login ID:</label>
+            <input type="text" id="loginId" name="loginId" placeholder="Enter Login ID" required> </div>
+        <div>
+            <label for="pwd" class="label">Password:</label>
+            <input type="password" id="pwd" name="pwd" placeholder="Enter Password" required> </div>
+        <div>
+            <label for="empCategory" id="empCategory">Domain:</label>
+            <select name="empCategory">
+                <option value="acctExecutive">Accounts Executive</option>
+                <option value="svcProvider">Service Provider</option>
+            </select>
+        </div>
+        <input id="action" name="action" type="hidden" value="validate">
+        <div>
+            <button>Sign In</button>
+        </div>
+        <div class="formInput"> <a href="user_registration_form.html">New Employee</a> <a href="user_password_reset_form.html">Change Password</a> </div>
+    </form>
+    <footer>
+        <p>&copy;National Bank</p>
+    </footer>
+    <a href="emp_executive_home.html">Temp Executive Home</a>
+    <a href="emp_service_provider_home.html">Temp Svc Provider Home</a>
+</body>
+
+</html>
