@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+                   initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IBS</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        
+        h1 {
+            color: white;
+            background-color: black;
+            font-size: 2em;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        h2,
+        ul {
+            text-align: center;
+        }
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid black;
+        }
+        
+        label {
+            margin-right: 5px;
+            width: 160px;
+            display: inline-block;
+            text-align: right;
+            padding: 5px;
+        }
+        
+        a {
+            margin-right: 5px;
+        }
+        
+        li:hover {
+            font-size: 1.4em;
+        }
+        
+        .acctsSubMenue {
+            background-color: antiquewhite;
+            font-size: 13px;
+        }
+        
+        #acctType {
+            margin-left: 20px;
+            width: 140px;
+            margin-right: 6px;
+        }
+        
+        select {
+            width: 167px;
+            height: 23px;
+        }
+        
+        table {
+            margin: auto;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid black;
+            width: 500px;
+        }
+        
+        th {
+            background-color: coral;
+            border: 2px solid black;
+            padding: 5px;
+            color: white;
+        }
+        td{
+           border: 1px solid black; 
+            padding: 5px;
+        }
+        
+        button {
+            margin: 5px;
+            width: 93px;
+            margin-left: 110px;
+        }
+        
+        form {
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Common Bank of India</h1>
+    <h2>Accounts</h2>
+    <ul>
+        <li><a href="user_home.html">Home</a></li>
+        <li onClick="ClickLink('Accounts')"><a href="user_accounts.html">Accounts</a></li>
+        <li><a href="user_beneficiary.html">Beneficiary</a></li>
+        <li><a href="index.html">Logout</a></li>
+    </ul>
+    <ul class="acctsMenue">
+        <li class="acctsSubMenue" onClick="ClickLink('OpenAccts')"><a href="#">Open Account</a></li>
+        <li class="acctsSubMenue" onClick="ClickLink('BalanceCheck')"><a href="#">Balance Check</a></li>
+        <li class="acctsSubMenue" onClick="ClickLink('MiniStatement')"><a href="#">Mini Statement</a></li>
+        <li class="acctsSubMenue"><a href="#">Monthly Statement</a></li>
+        <li class="acctsSubMenue"><a href="#">Periodic Statement</a></li>
+        <li class="acctsSubMenue"><a href="#">Annual Statement</a></li>
+        <li class="acctsSubMenue"><a href="#">Transfer Fund</a></li>
+        <li class="acctsSubMenue"><a href="#">Pay Utility Bill</a></li>
+    </ul>
+    <h2 id="welcomeText">User Account Home.</h2>
+    <form id="acctOperations">
+        <div>
+            <label for="depositAmunt">Deposit Amount: </label>
+            <input type="number" name="depositAmunt" required /> </div>
+        <div>
+            <label for="acctType" id="acctType">Select Account Type: </label>
+            <select name="acctType">
+                <option value="savings">Savings Account</option>
+                <option value="current">Current Account</option>
+                <option value="fixedDeposit">Fixed Deposit Account</option>
+            </select>
+        </div>
+        <div>
+            <button>Open</button>
+        </div>
+    </form>
+    <table>
+        <tr>
+            <th>Account Number</th>
+            <th>Account Balance</th>
+        </tr>
+        <tr>
+            <td>0012222222222</td>
+            <td>200</td>
+        </tr>
+    </table>
+    <footer>
+        <p>&copy;National Bank</p>
+    </footer>
+    <script>
+        var formElement = document.getElementById('acctOperations');
+        var welcomeTextElement = document.getElementById('welcomeText');
+        var acctBalanceElement = document.querySelector('table');
+        welcomeTextElement.style.display = 'block';
+        formElement.style.display = 'none';
+        acctBalanceElement.style.display = 'none';
+
+        function ClickLink(calledFrom) {
+            if (calledFrom == 'Accounts') {
+                welcomeTextElement.style.display = 'block';
+                formElement.style.display = 'none';
+                acctBalanceElement.style.display = 'none';
+            }
+            else if (calledFrom == 'OpenAccts') {
+                welcomeTextElement.style.display = 'none';
+                formElement.style.display = 'inline';
+                acctBalanceElement.style.display = 'none';
+            }
+            else if (calledFrom == 'BalanceCheck') {
+                welcomeTextElement.style.display = 'none';
+                formElement.style.display = 'none';
+                acctBalanceElement.style.display = 'table';
+            }
+//            else if (calledFrom == 'MiniStatement') {
+//                welcomeTextElement.style.display = 'none';
+//                formElement.style.display = 'none';
+//                ////////////not working
+//                var miniStatementElement = document.querySelector('th');
+////                var x = miniStatementElement.insertCell(3);
+////                x.innerHTML = "New cell";
+//                
+//                miniStatementElement.appendChild(th: new);
+//                miniStatementElement.style.display = 'table';
+//            }
+        }
+    </script>
+</body>
+
+</html>
