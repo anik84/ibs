@@ -32,21 +32,13 @@
             border: 1px solid black;
         }
         
-        label {
-            margin-right: 5px;
-            width: 160px;
-            display: inline-block;
-            text-align: right;
-            padding: 5px;
-        }
-        
         a {
             margin-right: 5px;
         }
         
         li:hover {
             font-size: 1.4em;
-/*            background-color: pink;*/
+            /*            background-color: pink;*/
         }
         
         .acctsSubMenue {
@@ -54,15 +46,27 @@
             font-size: 13px;
         }
         
+        label {
+            margin-right: 5px;
+            width: 300px;
+            display: inline-block;
+            text-align: right;
+            padding: 5px;
+        }
+        
+        input {
+            width: 200px;
+        }
         
         button {
             margin: 5px;
             width: 93px;
-            margin-left: 110px;
+            margin-left: 212px;
         }
         
         form {
             text-align: center;
+            margin-bottom: 15px;
         }
         
         footer {
@@ -90,11 +94,30 @@
         <li class="acctsSubMenue"><a href="user_transfer_fund.html">Transfer Fund</a></li>
         <li class="acctsSubMenue"><a href="user_pay_utility_bill.html">Pay Utility Bill</a></li>
     </ul>
-    <h2 id="welcomeText">User Account Home.</h2>
+    <h2 id="welcomeText">Pay Utility Bill.</h2>
+    <form>
+        <div>
+            <label for="fromAcctNo">From Account Number: </label>
+            <input type="text" name="fromAcctNo" disabled/> </div>
+        <div>
+            <label for="svcProvider">Selected Service Provider: </label>
+            <input type="text" name="svcProvider" disabled/> </div>
+        <div>
+            <label for="svcAcctNo">Service Provider's Account Number: </label>
+            <input type="text" name="svcAcctNo" disabled/> </div>
+        <div>
+            <label for="transferAmount">Transfer Amount: </label>
+            <input type="number" name="transferAmount" placeholder="Enter Transfer Amount" required /> </div>
+        <div>
+            <label for="transPwd">Transaction Password: </label>
+            <input type="password" name="transPwd" placeholder="Enter Transaction Password" required /> </div>
+        <div>
+            <button>Pay</button>
+        </div>
+    </form>
     <footer>
         <p>&copy;National Bank</p>
-    </footer>
-    
+    </footer> 
 </body>
 
 </html>

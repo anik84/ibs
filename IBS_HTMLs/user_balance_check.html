@@ -32,49 +32,34 @@
             border: 1px solid black;
         }
         
-        form {
-            text-align: center;
-        }
-        
         label {
             margin-right: 5px;
             width: 160px;
             display: inline-block;
             text-align: right;
-        }
-        
-        input {
-            margin: 5px;
-        }
-        
-        button {
-            margin: 5px;
-            width: 102px;
+            padding: 5px;
         }
         
         a {
             margin-right: 5px;
         }
-    
         
-        .acctsMenue {
-            display: inline-grid;
+        li:hover {
+            font-size: 1.4em;
+            /*            background-color: pink;*/
         }
         
         .acctsSubMenue {
             background-color: antiquewhite;
-            margin-left: 150px;
+            font-size: 13px;
         }
         
-        a:hover {
-            font-size: 1.4em;
-        }
         table {
             margin: auto;
             text-align: center;
             padding: 5px;
             border: 1px solid black;
-            width: 1200px;
+            width: 500px;
         }
         
         th {
@@ -88,6 +73,18 @@
             border: 1px solid black;
             padding: 5px;
         }
+        
+        button {
+            margin: 5px;
+            width: 93px;
+            margin-left: 110px;
+        }
+        
+        form {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
         footer {
             text-align: center;
         }
@@ -96,36 +93,47 @@
 
 <body>
     <h1>Common Bank of India</h1>
-    <h2>Request Approve and Reject</h2>
+    <h2>Accounts</h2>
     <ul>
-        <li><a href="emp_executive_home.html">Home</a></li>
-<!--        <li><a href="emp_aprove_reject_new_req.html">Requests</a></li>-->
-        <li><a href="emp_Login_form.html">Logout</a></li>
+        <li><a href="user_home.html">Home</a></li>
+        <li><a href="user_accounts.html">Accounts</a></li>
+        <li><a href="user_beneficiary.html">Beneficiary</a></li>
+        <li><a href="index.html">Logout</a></li>
     </ul>
-    <h2>New Requests.</h2>
+    <ul class="acctsMenue">
+        <li class="acctsSubMenue"><a href="user_open_account.html">Open Account</a></li>
+        <li class="acctsSubMenue"><a href="user_balance_check.html">Balance Check</a></li>
+        <li class="acctsSubMenue"><a href="user_mini_statement.html">Mini Statement</a></li>
+        <li class="acctsSubMenue"><a href="user_monthly_statement.html">Monthly Statement</a></li>
+        <li class="acctsSubMenue"><a href="user_periodic_statement.html">Periodic Statement</a></li>
+        <li class="acctsSubMenue"><a href="user_annual_statement.html">Annual Statement</a></li>
+        <li class="acctsSubMenue"><a href="user_transfer_fund.html">Transfer Fund</a></li>
+        <li class="acctsSubMenue"><a href="user_pay_utility_bill.html">Pay Utility Bill</a></li>
+    </ul>
+    <h2 id="welcomeText">User Account Balance.</h2>
+    <form>
+        <div>
+            <label for="acctNo">Enter Account Number: </label>
+            <input type="text" name="acctNo" placeholder="Enter Account Number" required /> </div>
+        <div>
+            <button>Get Balance</button>
+        </div>
+    </form>
     <table>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email ID</th>
-            <th>Address</th>
-            <th>Date of Birth</th>
-            <th>Phone Number</th>
-            <th>Approve/Reject</th>
+            <th>Account Number</th>
+            <th>Account Balance</th>
         </tr>
         <tr>
             <td>enter variable for jsp</td>
             <td>check not null to populate</td>
-            <td>enter variable for jsp</td>
-            <td>check not null to populate</td>
-            <td>enter variable for jsp</td>
-            <td>check not null to populate</td>
-            <td>Approve | Reject</td>
         </tr>
     </table>
+    
     <footer>
         <p>&copy;National Bank</p>
     </footer>
+    
 </body>
 
 </html>

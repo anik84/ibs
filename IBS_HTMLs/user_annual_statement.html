@@ -46,7 +46,7 @@
         
         li:hover {
             font-size: 1.4em;
-/*            background-color: pink;*/
+            /*            background-color: pink;*/
         }
         
         .acctsSubMenue {
@@ -54,6 +54,9 @@
             font-size: 13px;
         }
         
+        input {
+            width: 163px;
+        }
         
         button {
             margin: 5px;
@@ -63,6 +66,27 @@
         
         form {
             text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        table {
+            margin: auto;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid black;
+            width: 600px;
+        }
+        
+        th {
+            background-color: coral;
+            border: 2px solid black;
+            padding: 5px;
+            color: white;
+        }
+        
+        td {
+            border: 1px solid black;
+            padding: 5px;
         }
         
         footer {
@@ -90,11 +114,38 @@
         <li class="acctsSubMenue"><a href="user_transfer_fund.html">Transfer Fund</a></li>
         <li class="acctsSubMenue"><a href="user_pay_utility_bill.html">Pay Utility Bill</a></li>
     </ul>
-    <h2 id="welcomeText">User Account Home.</h2>
+    <h2 id="welcomeText">Annual Statement.</h2>
+    <form>
+        <div>
+            <label for="acctNo">Enter Account Number: </label>
+            <input type="text" name="acctNo" placeholder="Enter Account Number" required /> </div>
+        <div>
+            <label for="fromDate">From Date: </label>
+            <input type="date" name="fromDate" required /> </div>
+        <div>
+            <label for="toDate">To Date: </label>
+            <input type="date" name="toDate" required /> </div>
+        <div>
+            <button>Generate</button>
+        </div>
+    </form>
+    <table>
+        <tr>
+            <th>Account Number</th>
+            <th>Transaction Amount</th>
+            <th>Transaction Date</th>
+            <th>Transaction Type</th>
+        </tr>
+        <tr>
+            <td>enter variable for jsp</td>
+            <td>enter variable for jsp</td>
+            <td>check not null to display</td>
+            <td>check not null to display</td>
+        </tr>
+    </table>
     <footer>
         <p>&copy;National Bank</p>
     </footer>
-    
 </body>
 
 </html>
