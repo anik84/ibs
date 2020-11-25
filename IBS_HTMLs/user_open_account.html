@@ -54,6 +54,10 @@
             font-size: 13px;
         }
         
+        select {
+            width: 167px;
+            height: 23px;
+        }
         
         button {
             margin: 5px;
@@ -90,7 +94,24 @@
         <li class="acctsSubMenue"><a href="user_transfer_fund.html">Transfer Fund</a></li>
         <li class="acctsSubMenue"><a href="user_pay_utility_bill.html">Pay Utility Bill</a></li>
     </ul>
-    <h2 id="welcomeText">User Account Home.</h2>
+    <h2 id="welcomeText">Open New Account.</h2>
+    
+    <form id="acctOperations">
+        <div>
+            <label for="depositAmunt">Deposit Amount: </label>
+            <input type="number" name="depositAmunt" required /> </div>
+        <div>
+            <label for="acctType" id="acctType">Select Account Type: </label>
+            <select name="acctType">
+                <option value="savings">Savings Account</option>
+                <option value="current">Current Account</option>
+                <option value="fixedDeposit">Fixed Deposit Account</option>
+            </select>
+        </div>
+        <div>
+            <button>Open</button>
+        </div>
+    </form>
     <footer>
         <p>&copy;National Bank</p>
     </footer>

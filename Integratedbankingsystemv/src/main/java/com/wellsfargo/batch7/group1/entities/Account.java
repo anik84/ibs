@@ -1,9 +1,11 @@
 package com.wellsfargo.batch7.group1.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -16,7 +18,7 @@ public class Account {
 	@JoinColumn(name="uid")
 	private Customer UCI;
 	@Id
-	@Column(name="AcctNumber",unique=true)
+	@OneToMany(mappedBy="selfBenefAcctID",cascade=CascadeType.ALL)
 	private Integer acctNumber;
 	@Column(name="Accttype")
 	private String acctType;
@@ -27,7 +29,7 @@ public class Account {
 		
 	}
 
-	public Account(Customer uCI, Integer acctNumber, String acctType, Integer acctBalance) {
+	public Account(Customer uCI,Integer acctNumber, String acctType, Integer acctBalance) {
 		super();
 		UCI = uCI;
 		this.acctNumber = acctNumber;
@@ -43,13 +45,14 @@ public class Account {
 		UCI = uCI;
 	}
 
-	public Integer getAcctNumber() {
+    public Integer getAcctNumber() {
 		return acctNumber;
 	}
 
 	public void setAcctNumber(Integer acctNumber) {
 		this.acctNumber = acctNumber;
 	}
+
 
 	public String getAcctType() {
 		return acctType;

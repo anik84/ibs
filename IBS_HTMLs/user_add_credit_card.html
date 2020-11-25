@@ -32,28 +32,41 @@
             border: 1px solid black;
         }
         
-        button {
-            margin: 5px;
-            width: 102px;
-        }
-        
         a {
             margin-right: 5px;
         }
         
-      
         .acctsMenue {
             font-size: 13px;
         }
         
         .acctsSubMenue {
             background-color: antiquewhite;
-    
         }
+        
         a:hover {
             font-size: 1.4em;
         }
+        form{
+            text-align: center;
+        }
+        label {
+            margin-right: 5px;
+            width: 160px;
+            display: inline-block;
+            text-align: right;
+            padding: 5px;
+        }
         
+        select {
+            width: 167px;
+            height: 23px;
+        }
+        button {
+            margin: 5px;
+            width: 102px;
+            margin-left: 120px;
+        }
         
         footer {
             text-align: center;
@@ -76,7 +89,21 @@
         <li class="acctsSubMenue"><a href="user_add_credit_card.html">Add Credit Card</a></li>
         <li class="acctsSubMenue"><a href="user_modify_credit_card.html">Modify Credit Card</a></li>
     </ul>
-    <h2 id="welcomeText">Beneficiary Home.</h2>
+    <h2 id="welcomeText">Add Credit Card.</h2>
+    <form>
+        <div>
+            <label for="benefCreditCardName">Name on Credit Card: </label>
+            <input type="text" name="benefCreditCardName" placeholder="Enter Card Number" required /> </div>
+        <div>
+            <label for="benefCreditCardNo">Credit Card Number: </label>
+            <input type="number" name="benefCreditCardNo" placeholder="Enter Benef. Card No" required /> </div>
+        <div>
+            <label for="benefCardCVV">CVV Number: </label>
+            <input type="number" name="benefCardCVV" placeholder="Enter Benef. Card CVV" required /> </div>
+        <div>
+            <button>Add</button>
+        </div>
+    </form>
     <footer>
         <p>&copy;National Bank</p>
     </footer>

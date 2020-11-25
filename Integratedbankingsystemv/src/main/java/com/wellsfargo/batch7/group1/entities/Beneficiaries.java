@@ -3,7 +3,8 @@ package com.wellsfargo.batch7.group1.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 public class Beneficiaries {
 	
 	@Id
-	@ManyToOne
+	@OneToMany
 	@Column(name="selfBenefAcctID")
 	private Account selfBenefAcctID;
 	@Column(name="selfBenefAcctBalance")

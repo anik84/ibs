@@ -32,10 +32,6 @@
             border: 1px solid black;
         }
         
-        form {
-            text-align: center;
-        }
-        
         label {
             margin-right: 5px;
             width: 160px;
@@ -44,50 +40,37 @@
         }
         
         input {
+            width: 163px;
             margin: 5px;
-        }
-        
-        button {
-            margin: 5px;
-            width: 102px;
         }
         
         a {
             margin-right: 5px;
         }
-    
         
         .acctsMenue {
-            display: inline-grid;
+            font-size: 13px;
         }
         
         .acctsSubMenue {
             background-color: antiquewhite;
-            margin-left: 150px;
         }
         
         a:hover {
             font-size: 1.4em;
         }
-        table {
-            margin: auto;
+        
+        button {
+            margin: 5px;
+            width: 93px;
+            margin-left: 100px;
+        }
+        
+        form {
             text-align: center;
-            padding: 5px;
-            border: 1px solid black;
-            width: 1200px;
+            margin-bottom: 15px;
         }
         
-        th {
-            background-color: coral;
-            border: 2px solid black;
-            padding: 5px;
-            color: white;
-        }
-        
-        td {
-            border: 1px solid black;
-            padding: 5px;
-        }
         footer {
             text-align: center;
         }
@@ -96,33 +79,30 @@
 
 <body>
     <h1>Common Bank of India</h1>
-    <h2>Request Approve and Reject</h2>
+    <h2>Bank Representative Home.</h2>
     <ul>
-        <li><a href="emp_executive_home.html">Home</a></li>
-<!--        <li><a href="emp_aprove_reject_new_req.html">Requests</a></li>-->
+        <li><a href="emp_bank_rep_home.html">Home</a></li>
         <li><a href="emp_Login_form.html">Logout</a></li>
     </ul>
-    <h2>New Requests.</h2>
-    <table>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email ID</th>
-            <th>Address</th>
-            <th>Date of Birth</th>
-            <th>Phone Number</th>
-            <th>Approve/Reject</th>
-        </tr>
-        <tr>
-            <td>enter variable for jsp</td>
-            <td>check not null to populate</td>
-            <td>enter variable for jsp</td>
-            <td>check not null to populate</td>
-            <td>enter variable for jsp</td>
-            <td>check not null to populate</td>
-            <td>Approve | Reject</td>
-        </tr>
-    </table>
+    <ul class="acctsMenue">
+        <li class="acctsSubMenue"><a href="emp_monthly_statement.html">Monthly Statement</a></li>
+        <li class="acctsSubMenue"><a href="emp_periodic_statement.html">Periodic Statement</a></li>
+        <li class="acctsSubMenue"><a href="emp_annual_statement.html">Annual Statement</a></li>
+        <li class="acctsSubMenue"><a href="emp_fund_deposit_entry.html">Fund Deposit Entry</a></li>
+    </ul>
+    <h2>Fund Deposit.</h2>
+    <form>
+        <br/>
+        <div>
+            <label>Account No: </label>
+            <input type="number" name="accountNo" required /> </div>
+        <div>
+            <label>Amount: </label>
+            <input type="number" name="depositAmount" required /> </div>
+        <div>
+            <button>Deposit</button>
+        </div>
+    </form>
     <footer>
         <p>&copy;National Bank</p>
     </footer>
