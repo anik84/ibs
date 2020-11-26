@@ -27,13 +27,9 @@ form {
 
 label {
 	margin-right: 5px;
-	width: 75px;
+	width: 160px;
 	display: inline-block;
-}
-
-.formInput {
-	margin: 10px;
-	font-size: 15px;
+	text-align: right;
 }
 
 input {
@@ -42,7 +38,7 @@ input {
 
 button {
 	margin: 5px;
-	width: 82px;
+	width: 102px;
 }
 
 a {
@@ -51,6 +47,15 @@ a {
 
 footer {
 	text-align: center;
+}
+
+.acctsMenue {
+	display: inline-grid;
+}
+
+.acctsSubMenue {
+	background-color: antiquewhite;
+	margin-left: 150px;
 }
 
 a:hover {
