@@ -27,22 +27,28 @@ form {
 
 label {
 	margin-right: 5px;
-	width: 75px;
+	width: 160px;
 	display: inline-block;
-}
-
-.formInput {
-	margin: 10px;
-	font-size: 15px;
+	text-align: right;
 }
 
 input {
 	margin: 5px;
 }
 
+#empCategory {
+	width: 155px;
+	margin-right: 11px;
+}
+
+select {
+	width: 167px;
+}
+
 button {
 	margin: 5px;
-	width: 82px;
+	width: 102px;
+	margin-left: 109px;
 }
 
 a {

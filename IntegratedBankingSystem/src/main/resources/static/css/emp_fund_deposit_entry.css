@@ -21,38 +21,45 @@ li {
 	border: 1px solid black;
 }
 
-form {
-	text-align: center;
-}
-
 label {
 	margin-right: 5px;
-	width: 75px;
+	width: 160px;
 	display: inline-block;
-}
-
-.formInput {
-	margin: 10px;
-	font-size: 15px;
+	text-align: right;
 }
 
 input {
+	width: 163px;
 	margin: 5px;
-}
-
-button {
-	margin: 5px;
-	width: 82px;
 }
 
 a {
 	margin-right: 5px;
 }
 
-footer {
-	text-align: center;
+.acctsMenue {
+	font-size: 13px;
+}
+
+.acctsSubMenue {
+	background-color: antiquewhite;
 }
 
 a:hover {
 	font-size: 1.4em;
+}
+
+button {
+	margin: 5px;
+	width: 93px;
+	margin-left: 100px;
+}
+
+form {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+footer {
+	text-align: center;
 }

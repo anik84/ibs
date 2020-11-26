@@ -27,13 +27,9 @@ form {
 
 label {
 	margin-right: 5px;
-	width: 75px;
+	width: 160px;
 	display: inline-block;
-}
-
-.formInput {
-	margin: 10px;
-	font-size: 15px;
+	text-align: right;
 }
 
 input {
@@ -42,17 +38,46 @@ input {
 
 button {
 	margin: 5px;
-	width: 82px;
+	width: 102px;
 }
 
 a {
 	margin-right: 5px;
 }
 
-footer {
-	text-align: center;
+.acctsMenue {
+	display: inline-grid;
+}
+
+.acctsSubMenue {
+	background-color: antiquewhite;
+	margin-left: 150px;
 }
 
 a:hover {
 	font-size: 1.4em;
+}
+
+table {
+	margin: auto;
+	text-align: center;
+	padding: 5px;
+	border: 1px solid black;
+	width: 1200px;
+}
+
+th {
+	background-color: coral;
+	border: 2px solid black;
+	padding: 5px;
+	color: white;
+}
+
+td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+footer {
+	text-align: center;
 }

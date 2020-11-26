@@ -7,7 +7,7 @@
 	content="width=device-width, 
                    initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>IBS</title>user_beneficiary
+<title>IBS</title>
 <link rel="stylesheet" type="text/css" href="/css/user_beneficiary.css">
 </head>
 
