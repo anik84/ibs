@@ -1,0 +1,66 @@
+body {
+	background-color: bisque;
+}
+
+h1 {
+	color: white;
+	background-color: black;
+	font-size: 2em;
+	text-align: center;
+	line-height: 40px;
+}
+
+h2, ul {
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+label {
+	margin-right: 5px;
+	width: 160px;
+	display: inline-block;
+	text-align: right;
+	padding: 5px;
+}
+
+a {
+	margin-right: 5px;
+}
+
+li:hover {
+	font-size: 1.4em;
+	/*            background-color: pink;*/
+}
+
+.acctsSubMenue {
+	background-color: antiquewhite;
+	font-size: 13px;
+}
+
+input {
+	width: 165px;
+}
+.select{
+	width:167px;
+}
+
+button {
+	margin: 5px;
+	width: 93px;
+	margin-left: 110px;
+}
+
+form {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+footer {
+	text-align: center;
+}

@@ -1,0 +1,64 @@
+body {
+	background-color: bisque;
+}
+
+h1 {
+	color: white;
+	background-color: black;
+	font-size: 2em;
+	text-align: center;
+	line-height: 40px;
+}
+
+h2, ul {
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+form {
+	text-align: center;
+}
+
+label {
+	margin-right: 5px;
+	width: 160px;
+	display: inline-block;
+	text-align: right;
+}
+
+input {
+	margin: 5px;
+}
+
+#empCategory {
+	width: 155px;
+	margin-right: 11px;
+}
+
+select {
+	width: 167px;
+}
+
+button {
+	margin: 5px;
+	width: 102px;
+	margin-left: 109px;
+}
+
+a {
+	margin-right: 5px;
+}
+
+footer {
+	text-align: center;
+}
+
+a:hover {
+	font-size: 1.4em;
+}
